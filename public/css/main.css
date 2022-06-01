@@ -1,0 +1,20 @@
+ul.a {
+    list-style-type: circle;
+}
+
+ul.b {
+    list-style-type: square;
+}
+
+body {
+    background-color: lightblue;
+}
+
+.container-fluid {
+    background-color: #738ec2;
+    color: antiquewhite;
+}
+
+.nav li a {
+    color: antiquewhite;
+}
