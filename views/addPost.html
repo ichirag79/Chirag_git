@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Latest compiled and minified Bootstrap 3.4.1 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/css/main.css">
+
+    <title>About</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <span class="navbar-brand" href="#" style="color: white;">WEB322 - CHIRAG</span>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="/blog" style="color: white;">Blog</a></li>
+                    <li><a href="/about" style="color: white;">About</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/posts" style="color: white;">Posts</a></li>
+                    <li><a href="/categories" style="color: white;">categories</a></li>
+                    <li class="active"><a href="/posts/add">Add Post</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <div class="container" style="padding-top:60px">
+        <div class="row">
+
+            <div class="container  px-md-5 ">
+                <h2 class="py-4">Add Post</h2>
+
+                <h2 class="py-4"></h2>
+
+                <form class="needs-validation" novalidate method="post" enctype="multipart/form-data">
+                    <div class="form-row">
+                        <div class="col mb-3">
+                            <h3>Feature Image</h3>
+                            <hr>
+                            <input type="file" class="form-control" id="Image" name="featureImage" required>
+                        </div>
+                        <h3>Post Content</h3>
+                        <hr>
+                        <div class="col mb-3">
+                            <label for="Title">Title</label>
+                            <input type="text" class="form-control" id="Title" name="title" placeholder="Post Title" required>
+                        </div>
+                        <br>
+                        <div class="col mb-3">
+                            <label for="postbody">Body</label>
+                            <textarea class="form-control" name="postbody" rows="7" placeholder="Post Content"></textarea>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-row row">
+                        <div class="col-md-6 mb-3">
+                            <label for="Category">Category</label>
+
+                            <select name="category" class="form-control" id="category" required>
+                                <option value="">Select Category</option>
+                                <option value="technology">Technology</option>
+                                <option value="Gaming">Gaming</option>
+                                <option value="Fashion">Fashion</option>
+                                <option value="Education">Education</option>
+                                <option value="Wellness">Wellness</option>   
+                            </select>
+                        </div>
+
+                        <div class="col-md-6 mb-3 pt-1">
+                            <label class="form-check-label" for="inlineCheckbox1">Visibility</label><br>
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                            <label class="form-check-label" name="published" for="inlineCheckbox1">Published</label>
+                        </div>
+                    </div>
+                    <br>
+                    <hr>
+                    <div class="form-row row">
+                        <div class="text-end bg-light py-4 col-md-11"></div>
+                        <div class="text-end bg-light py-4 col-md-1">
+                            <button class="btn btn-primary" type="submit">Add Post</button>
+                        </div>
+                    </div>
+                    <br><br>
+                </form>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- Latest compiled and minified jQuery 3.6.0 JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified Bootstrap 3.4.1 JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4./js/bootstrap.min.js" integrity="Sha384-AJ21OJLMXNL5UYIL / XNWTMQVZERMZH2W8C5CRVPZPU8Y5BPPPSUUKHZXN0VXHD" crossorigin="Anonymous">
+    </script>
+</body>
+
+</html>

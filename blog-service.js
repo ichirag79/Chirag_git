@@ -53,10 +53,74 @@ module.exports.getPublishedPosts = function() {
 module.exports.getCategories = function() {
     return new Promise(async(resolve, reject) => {
         if (categoriesArray.length > 0) {
-            console.log(categoriesArray);
             resolve(categoriesArray);
         } else {
             reject("no results returned");
         }
     })
+}
+
+module.exports.addPost = function(postData) {
+    return new Promise(async(resolve, reject) => {
+        if (postData.published == undefined) {
+            postData.published = false;
+        } else {
+            postData.published = true;
+        }
+
+        postData.postDate = new Date();
+        postData.id = postsArray.length + 1;
+        postsArray.push(postData);
+        resolve(postData);
+        reject("error");
+
+
+    })
+}
+
+// getPostsByCategory Route
+
+module.exports.getPostsByCategory = (category) => {
+    return new Promise(function(resolve, reject) {
+        const df = fs.readFileSync('./data/posts.json');
+        var publishedPosts = JSON.parse(df);
+        var filtered = publishedPosts.filter(a => a.category == category);
+        if (filtered.length > 0) {
+            resolve(filtered);
+        } else {
+            reject("no results returned");
+        }
+    });
+};
+
+// getPostsByMinDate Route
+
+module.exports.getPostsByMinDate = (minDateStr) => {
+    return new Promise((resolve, reject) => {
+        const df = fs.readFileSync('./data/posts.json');
+        var publishedPosts = JSON.parse(df);
+        var filtered = publishedPosts.filter(a => new Date(a.postDate) >= new Date(minDateStr));
+        if (filtered.length > 0) {
+            resolve(filtered);
+        } else {
+            reject("no results returned");
+        }
+
+    });
+}
+
+// getPostsByID Route
+
+module.exports.getPostById = (id) => {
+    return new Promise((resolve, reject) => {
+        const df = fs.readFileSync('./data/posts.json');
+        var publishedPosts = JSON.parse(df);
+        var filtered = publishedPosts.filter(a => a.id == id);
+        if (filtered.length > 0) {
+            resolve(filtered);
+        } else {
+            reject("no results returned");
+        }
+
+    });
 }

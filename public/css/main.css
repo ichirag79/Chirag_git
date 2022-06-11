@@ -6,6 +6,10 @@ ul.b {
     list-style-type: square;
 }
 
+html {
+    color: aliceblue;
+}
+
 body {
     background-color: lightblue;
 }
@@ -15,6 +19,6 @@ body {
     color: antiquewhite;
 }
 
-.nav li a {
+.navigation {
     color: antiquewhite;
 }
